@@ -1,0 +1,16 @@
+{
+  "chef": {
+    "chef_server_url": "https://api.opscode.com/organizations/covario1",
+    "validation_client_name": "covario1-validator",
+    "validation_key_path": ".chef/covario1-validator.pem",
+    "client_key": ".chef/cdiaz324.pem",
+    "node_name": "cdiaz324"
+  },
+  "vagrant": {
+    "vm": {
+      "box": "opscode-ubuntu-12.04-i386",
+      "box_url": "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box",
+      "provision": "chef_client"
+    }
+  }
+}

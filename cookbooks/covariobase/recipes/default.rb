@@ -28,7 +28,7 @@ openssh_server '/etc/ssh/sshd_config' do
   ServerKeyBits 768
   LogLevel 'INFO'
   LoginGraceTime 120
-  PermitRootLogin 'no'
+  PermitRootLogin 'yes'
   StrictModes 'yes'
   RSAAuthentication 'yes'
   PubkeyAuthentication 'yes'
@@ -36,4 +36,15 @@ openssh_server '/etc/ssh/sshd_config' do
   X11DisplayOffset 10
   PrintLastLog 'yes'
   TCPKeepAlive 'yes'
+end
+
+bash "create_ssh_keys" do
+  user "root"
+  group "root"
+  cwd "/tmp"
+  code <<-EOH
+  /usr/bin/ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ''
+  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+  chmod 600 ~/.ssh/authorized_keys
+  EOH
 end

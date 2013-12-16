@@ -4,7 +4,7 @@ knife ec2 server create \
 --region us-west-2 \
 -G 'US West Oregon' \
 --ebs-size 100 \
---node-name hdpambarimaster1 \
+--node-name hdpambarimaster1.hdp.hadoop \
 -f m1.medium \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
 -r "role[base-ubuntu-ec2]," \
@@ -17,10 +17,10 @@ knife ec2 server create \
 --region us-west-2 \
 -G 'US West Oregon' \
 --ebs-size 100 \
---node-name hdpmaster1 \
+--node-name hdpmaster1.hdp.hadoop \
 -f m1.large \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
--r "role[base-ubuntu]" \
+-r "role[base-ubuntu-ec2]," \
 --ssh-port 22 \
 --ssh-user ubuntu
 
@@ -30,10 +30,10 @@ knife ec2 server create \
 --region us-west-2 \
 -G 'US West Oregon' \
 --ebs-size 100 \
---node-name hdpmaster2 \
+--node-name hdpmaster2.hdp.hadoop \
 -f m1.large \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
--r "role[base-ubuntu]" \
+-r "role[base-ubuntu-ec2]," \
 --ssh-port 22 \
 --ssh-user ubuntu
 
@@ -43,10 +43,10 @@ knife ec2 server create \
 --region us-west-2 \
 -G 'US West Oregon' \
 --ebs-size 100 \
---node-name hdpslave1 \
+--node-name hdpslave1.hdp.hadoop \
 -f m1.medium \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
--r "role[base-ubuntu]" \
+-r "role[base-ubuntu-ec2]," \
 --ssh-port 22 \
 --ssh-user ubuntu
 
@@ -56,10 +56,10 @@ knife ec2 server create \
 --region us-west-2 \
 -G 'US West Oregon' \
 --ebs-size 100 \
---node-name hdpslave2 \
+--node-name hdpslave2.hdp.hadoop \
 -f m1.medium \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
--r "role[base-ubuntu]" \
+-r "role[base-ubuntu-ec2]," \
 --ssh-port 22 \
 --ssh-user ubuntu
 
@@ -69,9 +69,9 @@ knife ec2 server create \
 --region us-west-2 \
 -G 'US West Oregon' \
 --ebs-size 100 \
---node-name hdpslave3 \
+--node-name hdpslave3.hdp.hadoop \
 -f m1.medium \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
--r "role[base-ubuntu]" \
+-r "role[base-ubuntu-ec2]," \
 --ssh-port 22 \
 --ssh-user ubuntu

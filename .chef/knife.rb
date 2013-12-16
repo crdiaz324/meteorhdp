@@ -11,3 +11,6 @@ chef_server_url          "https://api.opscode.com/organizations/covario1"
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
 cookbook_path            ["#{current_dir}/../cookbooks"]
+knife[:aws_access_key_id] = 'AKIAJGIEFK24PYR36XWA'
+knife[:aws_ssh_key_id] = 'USWest_Oregon'
+knife[:aws_secret_access_key] = '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'

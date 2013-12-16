@@ -1,0 +1,13 @@
+knife ec2 server create \
+-I ami-6aad335a \
+--availability-zone us-west-2c \
+--region us-west-2 \
+-G 'US West Oregon' \
+--ebs-size 250 \
+--node-name hdp-ambarimaster \
+-f m1.medium \
+-i ~/Documents/Covario/keys/USWest_Oregon.pem \
+-r "role[base-ubuntu]" \
+--ssh-port 22 \
+--ssh-user ubuntu
+

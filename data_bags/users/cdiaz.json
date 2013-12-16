@@ -1,0 +1,6 @@
+{
+	"id": "cdiaz",
+	"groups": ["admin"],
+	"shell": "\/bin\/bash",
+	"password": "$1$5h1kfDPA$UIgoORGQFjMZaxYTYcuu7."
+}

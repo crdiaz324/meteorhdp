@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "covariobase": {
+      "path": "./cookbooks/covariobase"
+    },
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "chef-client": {
+      "locked_version": "3.1.0"
+    },
+    "cron": {
+      "locked_version": "1.2.8"
+    },
+    "logrotate": {
+      "locked_version": "1.4.0"
+    },
+    "ntp": {
+      "locked_version": "1.5.0"
+    },
+    "timezone-ii": {
+      "locked_version": "0.2.0"
+    },
+    "users": {
+      "locked_version": "1.6.0"
+    },
+    "sshd": {
+      "locked_version": "1.0.0"
+    }
+  }
+}

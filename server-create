@@ -3,11 +3,75 @@ knife ec2 server create \
 --availability-zone us-west-2c \
 --region us-west-2 \
 -G 'US West Oregon' \
---ebs-size 250 \
---node-name hdp-ambarimaster \
+--ebs-size 100 \
+--node-name hdpambarimaster1 \
+-f m1.medium \
+-i ~/Documents/Covario/keys/USWest_Oregon.pem \
+-r "role[base-ubuntu-ec2]," \
+--ssh-port 22 \
+--ssh-user ubuntu
+
+knife ec2 server create \
+-I ami-6aad335a \
+--availability-zone us-west-2c \
+--region us-west-2 \
+-G 'US West Oregon' \
+--ebs-size 100 \
+--node-name hdpmaster1 \
+-f m1.large \
+-i ~/Documents/Covario/keys/USWest_Oregon.pem \
+-r "role[base-ubuntu]" \
+--ssh-port 22 \
+--ssh-user ubuntu
+
+knife ec2 server create \
+-I ami-6aad335a \
+--availability-zone us-west-2c \
+--region us-west-2 \
+-G 'US West Oregon' \
+--ebs-size 100 \
+--node-name hdpmaster2 \
+-f m1.large \
+-i ~/Documents/Covario/keys/USWest_Oregon.pem \
+-r "role[base-ubuntu]" \
+--ssh-port 22 \
+--ssh-user ubuntu
+
+knife ec2 server create \
+-I ami-6aad335a \
+--availability-zone us-west-2c \
+--region us-west-2 \
+-G 'US West Oregon' \
+--ebs-size 100 \
+--node-name hdpslave1 \
 -f m1.medium \
 -i ~/Documents/Covario/keys/USWest_Oregon.pem \
 -r "role[base-ubuntu]" \
 --ssh-port 22 \
 --ssh-user ubuntu
 
+knife ec2 server create \
+-I ami-6aad335a \
+--availability-zone us-west-2c \
+--region us-west-2 \
+-G 'US West Oregon' \
+--ebs-size 100 \
+--node-name hdpslave2 \
+-f m1.medium \
+-i ~/Documents/Covario/keys/USWest_Oregon.pem \
+-r "role[base-ubuntu]" \
+--ssh-port 22 \
+--ssh-user ubuntu
+
+knife ec2 server create \
+-I ami-6aad335a \
+--availability-zone us-west-2c \
+--region us-west-2 \
+-G 'US West Oregon' \
+--ebs-size 100 \
+--node-name hdpslave3 \
+-f m1.medium \
+-i ~/Documents/Covario/keys/USWest_Oregon.pem \
+-r "role[base-ubuntu]" \
+--ssh-port 22 \
+--ssh-user ubuntu

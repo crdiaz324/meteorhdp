@@ -8,7 +8,7 @@
 #
 
 include_recipe "apt" 
-include_recipe "chef-client" 
+include_recipe "chef-client::cron" 
 include_recipe "ntp"
 include_recipe "timezone-ii"
 include_recipe "users"
@@ -28,7 +28,7 @@ openssh_server '/etc/ssh/sshd_config' do
   ServerKeyBits 768
   LogLevel 'INFO'
   LoginGraceTime 120
-  PermitRootLogin 'yes'
+  PermitRootLogin 'no'
   StrictModes 'yes'
   RSAAuthentication 'yes'
   PubkeyAuthentication 'yes'
